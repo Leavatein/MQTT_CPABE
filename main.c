@@ -24,12 +24,19 @@ int main(void)
         int count;
         int counter=1;
         int output=0;
+<<<<<<< HEAD
 	int length = 0;
 	Bee_BeeOptions test = Bee_BeeOptions_initializer;
 	length=fun(Payload,&test);
 	printf("%d\n",length);
 	test.security = 6;
 /*        number = test.security;
+=======
+	Bee_BeeOptions test = Bee_BeeOptions_initializer;
+	fun(Payload,&test);
+	test.security = 6;
+        number = test.security;
+>>>>>>> 92ac2e2286023b8ec995293eb977028683ff6c25
         while(number != 0)
         {
                 count=number%2;
@@ -60,9 +67,14 @@ int main(void)
         sprintf(j,"%d",output);
         strcat(header,j);
         printf("header = %s\n",header);
+<<<<<<< HEAD
 */
 	length=fun(Payload,&test);
 	printf("%d\n",length);
+=======
+
+	fun(Payload,&test);
+>>>>>>> 92ac2e2286023b8ec995293eb977028683ff6c25
 	printf("Success!\n");
 	return 0;
 }

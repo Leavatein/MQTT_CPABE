@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 #define SIZE 10
+<<<<<<< HEAD
 int fun(char* Payload,Bee_BeeOptions* BEE)
 {
 	unsigned char plaintext[256];
@@ -36,5 +37,28 @@ int fun(char* Payload,Bee_BeeOptions* BEE)
 	{
 		//if(fdec("./cpabe_publickey","./cpabe_secretkey","./cat.jpg.cpabe")==-1)
   //      	return 0;
+=======
+void fun(char* Payload,Bee_BeeOptions* BEE)
+{
+	if(BEE->security==0)
+	{
+		if(fenc("./cpabe_publickey","./cat.jpg","jackie and s >= 100","default")==-1)
+		{
+                	printf("ENC FAIL\n");
+			return;
+        	}
+       		printf("ENC SUCCESS\n");
+        	return;
+		//printf("%sYES_BEE\n",Payload);
+	}else
+	{
+		if(fdec("./cpabe_publickey","./cpabe_secretkey","./cat.jpg.cpabe")==-1)
+		{
+                	printf("DEC FAIL\n");
+                	return;
+        	}
+        	printf("DEC SUCCESS\n");
+        	return;
+>>>>>>> 92ac2e2286023b8ec995293eb977028683ff6c25
 	}
 }
